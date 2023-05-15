@@ -5,6 +5,8 @@ import AntDesign from "react-native-vector-icons/AntDesign";
 
 export default function SearchBar() {
   return (
+
+    <View style = {{backgroundColor: "white", paddingBottom: 10}}>
     <View style ={{flexDirection: "row", alignItems: "center",height: 60}}>
     <View 
     style = {{
@@ -24,7 +26,7 @@ export default function SearchBar() {
             height: 50,
             borderRadius: 50,
             fontWeight: "600", 
-            fontSize: 17
+            fontSize: 17,
           }}
           cursorColor="black"
           
@@ -51,7 +53,7 @@ export default function SearchBar() {
     </View>
     
     <Ionicons name = "funnel" size = {20} style = {{paddingRight: 5, paddingTop: 5, marginTop: 5, marginRight: 5,}}/>
-  
+    </View>
     </View>
   )
 }

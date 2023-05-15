@@ -6,20 +6,22 @@ export default function HeaderTabs() {
 
   const [selected, setSelected] = useState<String>("Delivery");
 
-  const handleSwitch = (value)  => {
+  const handleSwitch = (value: String)  => {
     setSelected(value);
   }
 
   return (
+    <View style = {{backgroundColor: "white", paddingBottom: 10}}>
     <View style ={{
       flexDirection: "row",
       marginTop: 20,
-     
       alignSelf: "center"
     }}>
       <HeaderButton text = "Delivery" selected = {selected} switch = {handleSwitch}/>
       <HeaderButton text = "pickup" selected = {selected}  switch = {handleSwitch}/>
     </View>
+    </View>
+
   )
 }
 
@@ -37,7 +39,7 @@ const HeaderButton = (props: Props) => (
     }}
     onPress = {(e) => props.switch(props.text)}
     >
-      <Text style= {{
+      <Text style={{
         color: props.text == props.selected ? "white": "black",
         fontSize: 16,
         fontWeight: 900,
